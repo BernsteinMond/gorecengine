@@ -14,6 +14,4 @@ FROM scratch
 
 COPY --from=build /out/myapp /myapp
 
-COPY migrations /migrations
-
 ENTRYPOINT ["/myapp"]
