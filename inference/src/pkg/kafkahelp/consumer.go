@@ -1,4 +1,4 @@
-package kafka
+package kafkahelp
 
 import "github.com/segmentio/kafka-go"
 

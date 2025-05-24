@@ -3,16 +3,16 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/BernsteinMond/gorecengine/src/internal/inference/service"
+	"github.com/BernsteinMond/gorecengine/inference/src/internal/core"
 	"github.com/google/uuid"
 	"net/http"
 )
 
-func SetupRoutes(mux *http.ServeMux, service service.Service) {
+func SetupRoutes(mux *http.ServeMux, service core.Service) {
 	mux.Handle("/recommendation/posts", GetPostsRecommendation(service))
 }
 
-func GetPostsRecommendation(service service.Service) http.HandlerFunc {
+func GetPostsRecommendation(service core.Service) http.HandlerFunc {
 	type response struct {
 		Recommendation []postDTO `json:"recommendation"`
 	}
@@ -36,7 +36,7 @@ func GetPostsRecommendation(service service.Service) http.HandlerFunc {
 
 		recommendation, err := service.GetRecommendationByUserID(r.Context(), userID)
 		if err != nil {
-			http.Error(w, fmt.Sprintf("service: get recommendation by user id: %s", err.Error()), http.StatusInternalServerError)
+			http.Error(w, fmt.Sprintf("core: get recommendation by user id: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 
