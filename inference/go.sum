@@ -1,3 +1,5 @@
+github.com/BernsteinMond/gorecengine v0.0.0-20250524204257-af89d700ef88 h1:agZpkKrxD634b43QqmshgY8uMtNpvvlDLHwOflykRx4=
+github.com/BernsteinMond/gorecengine v0.0.0-20250524204257-af89d700ef88/go.mod h1:XXS2O0JCC7MwOYlrTlJ6DXiyi5UAXW//qR93jVQNMDg=
 github.com/caarlos0/env/v11 v11.3.1 h1:cArPWC15hWmEt+gWk7YBi7lEXTXCvpaSdCiZE2X5mCA=
 github.com/caarlos0/env/v11 v11.3.1/go.mod h1:qupehSf/Y0TUTsxKywqRt/vJjN5nz6vauiYEUUr8P4U=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
