@@ -37,7 +37,7 @@ func run() (err error) {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Hello from Go server!")
+		fmt.Fprintln(w, "И пусть весь интернет знает, что я\n 1.Задеплоил аппликуху в GCP \n 2. Люблю Юлю! ")
 	})
 
 	log.Println(cfg.Port)
