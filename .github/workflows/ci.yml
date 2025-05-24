@@ -14,11 +14,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test inference project
-        run: go test -v ./inference
-
-      - name: Test training project
-        run: go test -v ./training
+      - name: Test
+        run: go test -v ./...
   build:
     runs-on: ubuntu-latest
     needs:
