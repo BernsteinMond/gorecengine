@@ -1,4 +1,4 @@
-module github.com/BersnteinMond/inference
+module github.com/BersnteinMond/gorecengine/inference
 
 go 1.23.8
 

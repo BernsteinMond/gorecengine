@@ -1,4 +1,4 @@
-module github.com/BersnteinMond/training
+module github.com/BersnteinMond/gorecengine/training
 
 go 1.23.8
 
