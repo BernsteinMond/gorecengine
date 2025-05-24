@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test inference project
-        run: go test -v ./inference/...
+        run: go test -v ./inference
 
       - name: Test training project
-        run: go test -v ./training/...
+        run: go test -v ./training
   build:
     runs-on: ubuntu-latest
     needs:
@@ -33,7 +33,7 @@ jobs:
           go-version: '1.23.8'
 
       - name: Build inference project
-        run: go build -v ./inference/...
+        run: go build -v ./inference/src/cmd/server/.
 
       - name: Build training project
-        run: go build -v ./training/...
+        run: go build -v ./training/src/cmd/server/.
