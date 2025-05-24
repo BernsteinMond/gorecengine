@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 	"log/slog"
 	"net/http"
 	"os"
@@ -35,6 +36,11 @@ func run() (err error) {
 	default:
 	}
 
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello from Go server!")
+	})
+
+	log.Println(cfg.Port)
 	http.ListenAndServe(":"+cfg.Port, nil)
 	return nil
 }
