@@ -6,12 +6,7 @@ import (
 )
 
 type Config struct {
-	InferenceServer HTTPServer `envPrefix:"INFERENCE_SERVER_"`
-	Port            string     `env:"PORT"`
-}
-
-type HTTPServer struct {
-	ListenAddr string `env:"LISTEN_ADDR"`
+	Port string `env:"PORT"`
 }
 
 func loadCfgFromEnv() (Config, error) {
