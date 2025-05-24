@@ -12,6 +12,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /out/myapp ./src/cmd/server/
 
 FROM scratch
 
-COPY --from=build /out/myapp /myapp/inference
+COPY --from=build /out/myapp /myapp/training
 
-ENTRYPOINT ["/myapp/inference"]
+ENTRYPOINT ["/myapp/training"]
