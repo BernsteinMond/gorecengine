@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /out/myapp ./src/cmd/.
+RUN go build -o /out/myapp ./src/cmd/server/.
 
 FROM scratch
 
