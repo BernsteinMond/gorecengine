@@ -23,7 +23,7 @@ func run() (err error) {
 	defer stop()
 
 	slog.Info("Loading config from env")
-	_, err = loadCfgFromEnv()
+	cfg, err := loadCfgFromEnv()
 	if err != nil {
 		return fmt.Errorf("load config: %w", err)
 	}
@@ -35,6 +35,6 @@ func run() (err error) {
 	default:
 	}
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+cfg.Port, nil)
 	return nil
 }

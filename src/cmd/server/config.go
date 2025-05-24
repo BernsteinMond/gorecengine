@@ -7,6 +7,7 @@ import (
 
 type Config struct {
 	InferenceServer HTTPServer `envPrefix:"INFERENCE_SERVER_"`
+	Port            string     `env:"PORT"`
 }
 
 type HTTPServer struct {
