@@ -31,6 +31,3 @@ jobs:
 
       - name: Build inference project
         run: go build -v ./inference/src/cmd/server/.
-
-      - name: Build training project
-        run: go build -v ./training/src/cmd/server/.
